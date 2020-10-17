@@ -1,5 +1,5 @@
 //declare variables
-var hour, minute, second;
+var hr, mn, sc;
 var hourAngle, minuteAngle, secondAngle;
 
 
@@ -31,18 +31,18 @@ function draw() {
 //get current hour, minute, second and store in variables
 function getTime(){
   
-  hour = hour();
-  minute = minute();
-  second = second();
+  hr = hour();
+  mn = minute();
+  sc = second();
 }
 
 
 //set angles of hours', seconds' and minutes' hands
 function rotateHands(){
 
-  secondAngle = map(second, 0, 60, 0, 360);
-  minuteAngle = map(minute, 0, 60, 0, 360);
-  hourAngle = map(hour%12, 0, 12, 0, 360);
+  secondAngle = map(sc, 0, 60, 0, 360);
+  minuteAngle = map(mn, 0, 60, 0, 360);
+  hourAngle = map(hr/12, 0, 12, 0, 360);
 }
 
 
