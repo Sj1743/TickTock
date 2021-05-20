@@ -14,8 +14,8 @@ function draw() {
 
   //translate, rotate, set angle mode
   angleMode(DEGREES);
-  rotate(-90);
   translate(200,200);
+  rotate(-90);
 
   //background
   background(0);  
@@ -42,7 +42,7 @@ function rotateHands(){
 
   secondAngle = map(sc, 0, 60, 0, 360);
   minuteAngle = map(mn, 0, 60, 0, 360);
-  hourAngle = map(hr/12, 0, 12, 0, 360);
+  hourAngle = map(hr%12, 0, 12, 0, 360);
 }
 
 
@@ -56,7 +56,7 @@ function drawHands(){
   stroke(255,0,0);
   strokeWeight(6);
   line(0,0,100,0);
-  pop()
+  pop();
 
   //draw minutes' hand
   push();
@@ -64,7 +64,7 @@ function drawHands(){
   stroke(0,255,0);
   strokeWeight(6);
   line(0,0,75,0);
-  pop()
+  pop();
 
   //draw hours' hand
   push();
@@ -72,7 +72,7 @@ function drawHands(){
   stroke(0,0,255);
   strokeWeight(6);
   line(0,0,50,0);
-  pop()
+  pop();
 }
 
 
